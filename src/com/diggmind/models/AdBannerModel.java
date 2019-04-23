@@ -8,9 +8,9 @@ import java.io.Serializable;
 /**
  * AdBannerModel
  *
- * @author Develop
- * @modified 2017-11-08
- * @copyright develop@diggme.cn
+ * @author Benny
+ * @modified 2019-04-23
+ * @copyright develop@diggmind.com
  * @lisence MIT
  */
 @SuppressWarnings("serial")

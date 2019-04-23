@@ -64,7 +64,7 @@ class PlanC {
             System.out.println("getTestCode >>>>>>");
             System.out.println(inCode);
 
-            // 合作商支付成功后, 回调通知DiggMe该in_code已支付
+            // 合作商支付成功后, 回调通知DiggMind该in_code已支付
             String encryptData = (new JSONObject())
                     .put("status", "success")
                     .put("in_code", inCode)

@@ -64,7 +64,7 @@ class PlanB {
             System.out.println("getTestCode >>>>>>");
             System.out.println(inCode);
 
-            // 合作商支付成功后, 回调通知DiggMe该in_code已支付
+            // 合作商支付成功后, 回调通知DiggMind该in_code已支付
             String encryptData = (new JSONObject())
                     .put("status", "success")
                     .put("in_code", inCode)
@@ -79,9 +79,9 @@ class PlanB {
             // is_iframe 是否iframe模式
             String h5Url;
             if (sdk.getEnv().equals("prod")) {
-                h5Url = "https://wx.diggme.cn/channel/entry.html?channel_id=%s&test_id=%s&in_code=%s&is_iframe=1";
+                h5Url = "https://wx.diggmind.com/channel/entry?channel_id=%s&test_id=%s&in_code=%s&is_iframe=1";
             } else {
-                h5Url = "https://wxdev.diggme.cn/channel/entry.html?channel_id=%s&test_id=%s&in_code=%s&is_iframe=1";
+                h5Url = "https://wxdev.diggmind.com/channel/entry?channel_id=%s&test_id=%s&in_code=%s&is_iframe=1";
             }
             h5Url = String.format(h5Url,
                     String.valueOf(ChannelId),
