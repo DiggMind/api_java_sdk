@@ -80,14 +80,14 @@ public class TestModel implements Serializable {
 
     /**
      * 测试价格
-     * channel.diggmind.cn后台设置，此价格信息供参考，合作商可选择性采用
+     * channel.diggmind.com后台设置，此价格信息供参考，合作商可选择性采用
      */
     @JsonProperty("price")
     private BigDecimal price;
 
     /**
      * 测试促销价格
-     * channel.diggmind.cn后台设置，此价格信息供参考，合作商可选择性采用
+     * channel.diggmind.com后台设置，此价格信息供参考，合作商可选择性采用
      */
     @JsonProperty("discount_price")
     private BigDecimal discountPrice;

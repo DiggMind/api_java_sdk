@@ -39,11 +39,11 @@ public class DiggmindSdk {
                 this.serverUrl = "http://api.diggmind.local/api/" + this.version + '/';
                 break;
             case "develop":
-                this.serverUrl = "http://apidev.diggmind.cn/api/" + this.version + '/';
+                this.serverUrl = "http://apidev.diggmind.com/api/" + this.version + '/';
                 break;
             case "production":
             default:
-                this.serverUrl = "https://api.diggmind.cn/api/" + this.version + '/';
+                this.serverUrl = "https://api.diggmind.com/api/" + this.version + '/';
         }
     }
 
