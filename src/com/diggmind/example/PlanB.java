@@ -24,9 +24,6 @@ class PlanB {
             // 初始化SDK
             DiggmindSdk sdk = new DiggmindSdk(appKey, appSecret);
 
-            // 设置sdk接口环境 develop / production
-            sdk.setEnv("develop");
-
             // 获取访问令牌 (合作商可使用缓存方案,避免频繁获取的网络延时)
             AccessTokenModel accessTokenModel = sdk.getOpenAccessToken("client_credential");
             // 设置SDK访问令牌
