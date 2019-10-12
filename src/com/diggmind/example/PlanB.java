@@ -15,7 +15,7 @@ class PlanB {
     public static void main(String... args) throws UnsupportedEncodingException, NoSuchAlgorithmException {
 
         // 填写必要信息
-        int ChannelId = 0;
+        String channelCode = "";
         String appKey = "";
         String appSecret = "";
 
@@ -76,12 +76,12 @@ class PlanB {
             // is_iframe 是否iframe模式
             String h5Url;
             if (sdk.getEnv().equals("prod")) {
-                h5Url = "https://wx.diggmind.com/channel/entry?channel_id=%s&test_id=%s&in_code=%s&is_iframe=1";
+                h5Url = "https://wx.diggmind.com/channel/entry?channel_code=%s&test_id=%s&in_code=%s&is_iframe=1";
             } else {
-                h5Url = "https://wxdev.diggmind.com/channel/entry?channel_id=%s&test_id=%s&in_code=%s&is_iframe=1";
+                h5Url = "https://wxdev.diggmind.com/channel/entry?channel_code=%s&test_id=%s&in_code=%s&is_iframe=1";
             }
             h5Url = String.format(h5Url,
-                    String.valueOf(ChannelId),
+                    String.valueOf(ChannelCode),
                     String.valueOf(testList.get(0).getId()),
                     String.valueOf(inCode));
             System.out.println("reportUrl >>>>>>");
