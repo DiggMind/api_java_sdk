@@ -312,8 +312,22 @@ public class DiggmindSdk {
      * @throws RemoteServerException
      */
     public TestModel getTestDetail(int testId) throws InvalidParamsException, RemoteServerException {
+        return getTestDetail(testId,false);
+    }
+
+    /**
+     * 测试详情
+     *
+     * @param testId
+     * @param isPurifier
+     * @return TestModel | null
+     * @throws InvalidParamsException
+     * @throws RemoteServerException
+     */
+    public TestModel getTestDetail(int testId, boolean isPurifier) throws InvalidParamsException, RemoteServerException {
         Map<String, String> params = new HashMap<>();
         params.put("test_id", String.valueOf(testId));
+        params.put("is_purifier", String.valueOf(isPurifier ? 1 : 0));
 
         JSONObject result = makeRequest("channel/test/detail", "get", params);
         if (result.isNull("data")) {
