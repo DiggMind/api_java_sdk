@@ -81,7 +81,7 @@ class PlanB {
                 h5Url = "https://wxdev.diggmind.com/channel/entry?channel_code=%s&test_id=%s&in_code=%s&is_iframe=1";
             }
             h5Url = String.format(h5Url,
-                    String.valueOf(ChannelCode),
+                    channelCode,
                     String.valueOf(testList.get(0).getId()),
                     String.valueOf(inCode));
             System.out.println("reportUrl >>>>>>");

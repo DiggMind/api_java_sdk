@@ -50,6 +50,7 @@ public class TestModel implements Serializable {
 
     /**
      * 测试详情
+     * （测评介绍、你将获得、适合谁测）
      */
     @JsonProperty("content")
     private String content;
@@ -65,6 +66,30 @@ public class TestModel implements Serializable {
      */
     @JsonProperty("content_report")
     private String contentReport;
+
+    /**
+     * 参考文献
+     */
+    @JsonProperty("content_document")
+    private String contentDocument;
+
+    /**
+     * 测评特色
+     */
+    @JsonProperty("content_feature")
+    private String contentFeature;
+
+    /**
+     * 更新信息
+     */
+    @JsonProperty("content_update")
+    private String contentUpdate;
+
+    /**
+     * 购买说明
+     */
+    @JsonProperty("content_policy")
+    private String contentPolicy;
 
     /**
      * 是否需要角色信息
@@ -414,6 +439,38 @@ public class TestModel implements Serializable {
         this.questionTime = questionTime;
     }
 
+    public String getContentDocument() {
+        return contentDocument;
+    }
+
+    public void setContentDocument(String contentDocument) {
+        this.contentDocument = contentDocument;
+    }
+
+    public String getContentFeature() {
+        return contentFeature;
+    }
+
+    public void setContentFeature(String contentFeature) {
+        this.contentFeature = contentFeature;
+    }
+
+    public String getContentUpdate() {
+        return contentUpdate;
+    }
+
+    public void setContentUpdate(String contentUpdate) {
+        this.contentUpdate = contentUpdate;
+    }
+
+    public String getContentPolicy() {
+        return contentPolicy;
+    }
+
+    public void setContentPolicy(String contentPolicy) {
+        this.contentPolicy = contentPolicy;
+    }
+
     @Override
     public String toString() {
         return "TestModel{" +
@@ -425,6 +482,10 @@ public class TestModel implements Serializable {
                 ", content='" + content + '\'' +
                 ", contentParameter='" + contentParameter + '\'' +
                 ", contentReport='" + contentReport + '\'' +
+                ", contentDocument='" + contentDocument + '\'' +
+                ", contentFeature='" + contentFeature + '\'' +
+                ", contentUpdate='" + contentUpdate + '\'' +
+                ", contentPolicy='" + contentPolicy + '\'' +
                 ", requireRole=" + requireRole +
                 ", requireInfo=" + requireInfo +
                 ", price=" + price +
