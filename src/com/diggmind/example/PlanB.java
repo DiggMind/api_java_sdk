@@ -46,6 +46,11 @@ class PlanB {
             System.out.println("getTestList >>>>>>");
             System.out.println(testList);
 
+            // 获取测试列表（可选：根据价格区间）
+            ArrayList<TestModel> testList2 = sdk.getTestList("49-59.9",categoryId, page, size);
+            System.out.println("getTestList2 >>>>>>");
+            System.out.println(testList2);
+
             // 获取测试详情
             TestModel testModel = sdk.getTestDetail(testList.get(0).getId());
             System.out.println("getTestDetail >>>>>>");
