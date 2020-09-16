@@ -279,7 +279,24 @@ public class DiggmindSdk {
      * @throws RemoteServerException
      */
     public ArrayList<TestModel> getTestList(int categoryId, int page, int size) throws InvalidParamsException, RemoteServerException {
+        return this.getTestList("", categoryId, page, size);
+    }
+
+    /**
+     * 测试列表
+     *
+     * @param priceRange
+     * @param categoryId
+     * @param size
+     * @param page
+     * @return ArrayList<TestModel> | null
+     * @throws InvalidParamsException
+     * @throws RemoteServerException
+     */
+    public ArrayList<TestModel> getTestList(String priceRange, int categoryId, int page, int size) throws InvalidParamsException, RemoteServerException {
+
         Map<String, String> params = new HashMap<>();
+        params.put("price_range", priceRange);
         params.put("category_id", String.valueOf(categoryId));
         params.put("page", String.valueOf(page));
         params.put("size", String.valueOf(size));
@@ -312,7 +329,7 @@ public class DiggmindSdk {
      * @throws RemoteServerException
      */
     public TestModel getTestDetail(int testId) throws InvalidParamsException, RemoteServerException {
-        return getTestDetail(testId,false);
+        return getTestDetail(testId, false);
     }
 
     /**
